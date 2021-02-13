@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/reset.css" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Creative Chase</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <img src="/images/creativechase_small.svg" onclick="window.location.href='#'">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li id="menu-about">About</li>
+                        <li id="menu-posters">Posters</li>
+                        <li id="menu-shop">Shop</li>
+                    </ul>
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </nav>
+    </header>   
+    <main>
+        <div class="container">
+            <section id="top">
+                <h1>Customized posters</h1>
+                <p>Made to order prints by graphic designer Matilda Björk</p>
+                <button class="transparent-button" onclick="scrollPosters()">See more</button>
+            </section>
+            <section id="about">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend imperdiet neque. Praesent ut nisl sapien. Praesent eget imperdiet urna. Curabitur venenatis turpis mauris, et interdum sem luctus quis. Etiam posuere diam at sapien euismod iaculis. Morbi et tempor libero. Sed molestie eget risus in finibus.</p>
+                <p>Aliquam tempus aliquet maximus. Fusce dictum, mi iaculis commodo luctus, ligula elit varius metus, scelerisque dapibus quam lorem sed erat. Integer ex tortor, tincidunt eget erat in, commodo mattis metus. Sed fringilla mi eget aliquam facilisis. Nullam et odio sit amet arcu egestas lacinia eget rhoncus odio. Sed justo nulla, pharetra fringilla purus sed, mattis vulputate felis. Cras ipsum orci, consectetur a ornare pellentesque, condimentum ullamcorper metus.</p>
+            </section>
+            <section id="posters">
+                <div class="stick">
+                    <h2>Posters</h2>
+                    <p>Examples of previously made prints</p>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="gallery">
+                    <img src="/images/flowers.png" class="example-poster">
+                    <img src="images/hand.png" class="example-poster">
+                    <img src="/images/flowers.png" class="example-poster">
+                    <img src="images/hand.png" class="example-poster">
+                </div>
+            </section>
+            <section id="order">
+                <h2>Shop</h2>
+                <p>Customize your poster</p>
+                <form>
+                    <div class="size-and-background">
+                        <div class="form-size">
+                            <label for="size">Select size <span class="required">*</span></label>                
+                            <select name="size" id="size" onchange="calculatePrice();" required>
+                                <option value="0">--</option>
+                                <option value="399">30x40 cm (399 kr)</option>
+                                <option value="499">40x70 cm (499 kr)</option>
+                                <option value="599">70x100 cm (599 kr)</option>
+                            </select>
+                        </div>
+                        <div class="form-background">
+                            <label for="background">Select background color <span class="required">*</span></label>
+                            <select name="background" id="background" required>
+                                <option>--</option>
+                                <option>Blue</option>
+                                <option>Green</option>
+                                <option>Yellow</option>
+                                <option>Red</option>
+                                <option>Purple</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-motif">
+                        <label for="motif">Describe the design you want <span class="required">*</span></label>
+                        <input type="text" name="motif" id="motif" required>
+                    </div>
+                    <div class="text-and-preview">
+                        <div class="form-text">
+                            <label for="text">Add text (optional)</label>
+                            <input type="text" name="text" id="text">
+                        </div>
+                        <div class="form-preview">
+                            <input type="checkbox" id="preview" name="preview" onchange="calculatePrice();">
+                            <label for="preview">Add preview (99 kr)</label>
+                        </div>
+                    </div>
+                    <div class="price-and-add">
+                        <div id="price"></div><button class="transparent-button" id="add-button">Add to cart</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <div class="container">
+        <footer>
+            <div class="inner-wrapper">
+                <div class="column">
+                    <h3>Info</h3>
+                    <ul>
+                        <li>Pricing</li>
+                        <li>Terms & conditions</li>
+                        <li>Something else</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>info@creativechase.com</li>
+                        <li>+46 123 45 67</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Social Media</h3>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>

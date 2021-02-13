@@ -1,0 +1,309 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: liquido;
+    src: url(fonts/liquido-fluid-webfont.woff);
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+p + p {
+    padding-top: 1em;
+}
+
+h1 {
+    font-family: liquido;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px #fff;
+    font-size: 7em;
+}
+
+
+h2 {
+    font-family: liquido;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px #fff;
+    font-size: 5em;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.transparent-button {
+    background-color: transparent;
+    padding: 1.3em 2em 1.3em;
+    text-transform: uppercase;
+    font-size: .9em;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 2em;
+}
+
+.transparent-button:hover {
+    animation: pulse;
+    animation-duration: .5s;
+    cursor: pointer;
+}
+
+/* Nav bar */
+
+nav {
+    position: fixed;
+    width: 100vw;
+    background-color: #fff;
+    top: 0;
+    color: #222;
+    z-index: 10;
+}
+
+nav .container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 5em;
+    animation: spin;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.menu li {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: .8em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.menu li:hover {
+    opacity: .5;
+}
+
+.cart i {
+    font-size: .9em;
+    width: 5em;
+    text-align: right;
+    cursor: pointer;
+    transition: .3s;
+}
+
+/* Top section */
+
+#top {
+    background-color: #EC7474;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/hand_cropped.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 15em;
+    padding: 2em;
+    text-align: center;
+    margin-top: 7em;
+    margin-bottom: 2em;
+}
+
+#top button {
+    margin-bottom: 7em;
+}
+
+/* About */
+
+#about {
+    height: 80vh;
+    background-color: #8BBEDF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    text-align: center;
+    padding: 2em;
+}
+
+#about p {
+    max-width: 30em;
+}
+
+/* Posters */
+
+#posters {
+    height: 80vh;
+    background-color: #9DD182;
+    text-align: center;
+    margin-bottom: 2em;
+    overflow-x: scroll;
+}
+
+.stick {
+    position: absolute;
+    width: 90%;
+    margin: auto;
+    padding-top: 3em;
+}
+
+.stick i {
+    padding-top: .5em;
+    animation: right;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    position: relative;
+}
+
+@keyframes right {
+    0% {left: 0;}
+    50% {left: 5px;}
+    100% {left: 0;}
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    padding-left: 3em;
+    width: 100%;
+    margin-top: 12em;
+}
+
+.example-poster {
+    min-width: 20em;
+    max-width: 20em;
+    border: 20px solid #fff;
+    margin-left: 2em;
+    margin-right: 2em;
+    overflow: hidden;
+    box-shadow: 8px 8px 0px #90bc78;
+}
+
+/* Order */
+
+#order {
+    height: 80vh;
+    background-color: #8B9BDF;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    font-size: .8em;
+    margin-top: 2em;
+}
+
+label {
+    padding-bottom: .3em;
+}
+
+.size-and-background, .text-and-preview, .price-and-add {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 1em;
+}
+
+.form-size, .form-background, .form-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-motif {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-preview {
+    align-self: flex-end;
+}
+
+.price-and-add {
+    justify-content: space-between;
+}
+
+#size, #background, #motif, #text, #preview {
+    padding: 1em;
+    border: 0;
+    margin-bottom: 1em;
+}
+
+#price {
+    font-size: 2em;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.required {
+    color: #EC7474;
+}
+
+/* Footer */
+
+footer {
+    background-color: #eee;
+    margin-bottom: 4em;
+    font-size: .7em;
+    color: #222;
+}
+
+.inner-wrapper {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    opacity: .5;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    text-align: center;
+}
+
+footer h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: .6em;
+}
+
+footer i {
+    font-size: 1.2em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    .menu li {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
